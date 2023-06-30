@@ -58,6 +58,16 @@ importers:
         specifier: ^5.0.4
         version: 5.0.4
 
+  apps/node-script:
+    dependencies:
+      '@monorepo/utils':
+        specifier: workspace:*
+        version: link:../../packages/@monorepo/utils
+    devDependencies:
+      typescript:
+        specifier: ^5.0.4
+        version: 5.1.6
+
   apps/playground:
     dependencies:
       '@monorepo/utils':

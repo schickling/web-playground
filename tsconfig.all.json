@@ -3,6 +3,7 @@
   "compilerOptions": {},
   "include": [],
   "references": [
+    { "path": "./apps/node-script" },
     { "path": "./apps/playground" },
   ]
 }
