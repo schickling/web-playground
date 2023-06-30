@@ -11,6 +11,7 @@
     "@monorepo/utils": "workspace:*"
   },
   "devDependencies": {
+    "@types/node": "^20.3.2",
     "typescript": "^5.0.4"
   }
 }
