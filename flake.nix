@@ -11,18 +11,12 @@
       in
       {
 
-        # devShell = with pkgs; pkgs.mkShell {
-        #   buildInputs = [
-        #     nodejs_20
-        #     (yarn.override { nodejs = nodejs_20; })
-        #   ];
-        # };
-
         devShells = {
           default = with pkgs; pkgs.mkShell {
             buildInputs = [
               nodejs_20
               (yarn.override { nodejs = nodejs_20; })
+              nodePackages.pnpm
             ];
           };
         };

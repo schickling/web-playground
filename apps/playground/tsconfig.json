@@ -1,0 +1,14 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "jsx": "react",
+    // the `dist` folder is already "taken" by Vite
+    "outDir": "./dist/.ts",
+    "rootDir": "./src",
+    "tsBuildInfoFile": "./dist/.ts/.tsbuildinfo",
+  },
+  "include": ["./src"],
+  "references": [
+    { "path": "../../packages/@monorepo/utils" },
+  ]
+}

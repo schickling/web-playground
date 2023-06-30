@@ -1,0 +1,103 @@
+{
+  // See https://go.microsoft.com/fwlink/?LinkId=733558
+  // for the documentation about the tasks.json format
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "install",
+      "type": "shell",
+      "command": "direnv exec . pnpm install",
+      "problemMatcher": [],
+      "presentation": {
+        "focus": true,
+        "panel": "shared",
+        "group": "pnpm",
+        "showReuseMessage": false,
+        "clear": false,
+        "close": true,
+      }
+    },
+    {
+      "label": "build:clean",
+      "type": "shell",
+      "command": "direnv exec . pnpm build:clean",
+      "problemMatcher": [],
+      "presentation": {
+        "focus": true,
+        "panel": "shared",
+        "group": "dev",
+        "showReuseMessage": false,
+        "clear": false,
+        "close": true,
+      }
+    },
+    {
+      "label": "dev:ts",
+      "type": "shell",
+      "command": "direnv exec . pnpm dev:ts",
+      "problemMatcher": [
+        "$tsc-watch"
+      ],
+      "isBackground": true,
+      "presentation": {
+        "focus": false,
+        "panel": "shared",
+        "group": "dev",
+        "showReuseMessage": false,
+        "clear": false
+      }
+    },
+    {
+      "label": "dev:playground",
+      "dependsOn": [
+        "dev:playground:vite",
+      ],
+      "problemMatcher": []
+    },
+    {
+      "label": "dev:playground:vite",
+      "dependsOn": [
+        "dev:ts",
+      ],
+      "type": "shell",
+      "command": "direnv exec . pnpm dev",
+      "isBackground": true,
+      "options": {
+        "cwd": "${workspaceFolder}/apps/playground"
+      },
+      "presentation": {
+        "focus": false,
+        "panel": "shared",
+        "group": "dev:scraper",
+        "showReuseMessage": false,
+        "clear": false
+      }
+    },
+    {
+      "label": "lint",
+      "type": "shell",
+      "command": "direnv exec . pnpm lint:check",
+      "problemMatcher": "$eslint-stylish",
+      "presentation": {
+        "focus": false,
+        "panel": "shared",
+        "group": "dev:lint",
+        "showReuseMessage": false,
+        "clear": true
+      }
+    },
+    {
+      "label": "test",
+      "type": "shell",
+      "command": "direnv exec . pnpm test",
+      "problemMatcher": [],
+      "presentation": {
+        "focus": true,
+        "panel": "shared",
+        "group": "test",
+        "showReuseMessage": false,
+        "clear": true
+      }
+    }
+  ]
+}

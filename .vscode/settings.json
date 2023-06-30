@@ -1,0 +1,58 @@
+{
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": false,
+    "source.fixAll.eslint": true,
+    "source.addMissingImports": true
+  },
+  "editor.formatOnSave": true,
+  "eslint.format.enable": true,
+  "[javascript]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint" 
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "eslint.validate": ["markdown", "javascript", "typescript"],
+  "files.associations": {
+    "tauri.conf.json5": "jsonc",
+  },
+  "files.exclude": {
+    "**/node_modules/**/dist": false,
+    "**/{apps,packages}/**/dist": true,
+    "**/.git": true,
+    "**/.vercel": true,
+    "**/.netlify": true,
+    "**/.storybook": true,
+    "**/playwright-report": true,
+    "**/.direnv": true,
+    "**/.yarn": true,
+    "**/.DS_Store": true,
+    "**/yarn.lock": true,
+    "**/flake.lock": true
+  },
+  "search.exclude": {
+    "**/__generated__/gql": true,
+    "**/backend/web/cached-spotify-player.js": true,
+    "**/public/spotify-sdk/**": true,
+    "**/.vercel": true,
+    "**/.yarn": true,
+    "**/.direnv": true,
+    "**/dist": true,
+    ".pnp.js": true,
+    "yarn.lock": true
+  },
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "vitest.commandLine": "direnv exec . vitest",
+  "vitest.exclude": [
+    "**/node_modules/**",
+    "**/dist/**",
+    "**/cypress/**",
+    "**/.{idea,git,cache,output,temp,direnv}/**"
+  ]
+}

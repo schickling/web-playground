@@ -1,0 +1,10 @@
+tasks:
+  - name: Nix env
+    init: pnpm install
+ports:
+  - name: Playground
+    port: 3030
+    onOpen: open-browser
+github:
+  prebuilds:
+    addCheck: true
